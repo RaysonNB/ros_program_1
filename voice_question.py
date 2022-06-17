@@ -88,15 +88,14 @@ if __name__ == "__main__":
         else:
             aaaa=answer(s, data)
             if "*" in aaaa:
-                if "open" in s:
+                if "open" in aaaa:
                     open_gripper(1.0)
                     say("open")
-                elif "close" in s:
-                    close_gripper(1.0)
-                    say("close")
-                elif "help" in s:
+                elif "get milk tea" in aaaa:
+                    #walk to somewhere and get it
+                elif "help" in aaaa:
                     move_to(xyz_init[0], xyz_init[1], xyz_init[2], 3.0)
-                elif "OK" in s:
+                elif "OK" in aaaa:
                     move_to(xyz_home[0], xyz_home[1], xyz_home[2], 3.0)
                 else:
                     say("I don't know how to do the action")
